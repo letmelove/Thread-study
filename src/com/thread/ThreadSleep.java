@@ -1,12 +1,12 @@
 package com.thread;
 
 /**
- * 模拟买票
- * 问题：多个线程操作同一个资源的情况下，线程不安全，数据紊乱
+ * 买票案例
+ * 模拟延时：放大问题的发生性
  */
-public class TestThread implements Runnable {
+public class ThreadSleep implements Runnable {
 
-    //飘数
+    //票数
     private int ticket = 10;
 
     @Override
@@ -27,7 +27,7 @@ public class TestThread implements Runnable {
     }
 
     public static void main(String[] args) {
-        TestThread testThread = new TestThread();
+        ThreadSleep testThread = new ThreadSleep();
         new Thread(testThread, "张三").start();
         new Thread(testThread, "李四").start();
         new Thread(testThread, "旺旺").start();
