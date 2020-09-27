@@ -2,7 +2,7 @@ package com.thread;
 
 /**
  * 线程礼让
- * 礼让不一定成功，还是看cup来调度
+ * 礼让不一定成功，还是看cpu来调度
  */
 public class ThreadYield {
 
